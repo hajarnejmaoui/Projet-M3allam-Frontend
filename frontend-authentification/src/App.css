@@ -1,0 +1,165 @@
+/* Import des polices */
+@import url('https://fonts.googleapis.com/css2?family=Sans+Serif:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Halyard+Display:wght@400&display=swap');
+
+/* Couleurs principales */
+:root {
+  --color-primary: #4D595F;
+  --color-secondary: #0C5844;
+  --color-accent: #C0DED6;
+  --color-background: #E7FBF7;
+  --color-text: #091922;
+  --color-white: #FFFFFF;
+  --color-gray: #98ABA9;
+  --color-light: #F8FAF9;
+  --color-hover: #556166;
+}
+
+/* Conteneur principal */
+.container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Sans Serif', sans-serif;
+}
+
+/* Colonne gauche */
+.left-column {
+  flex: 1;
+  background: linear-gradient(120deg,  #C0DED6,#0C5844);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  color: var(--color-white);
+  position: relative;
+}
+
+/* Conteneur du logo */
+.logo-container {
+  position: absolute;
+  top: 80px;
+  left: 40px;
+}
+
+.app-logo {
+  width: 200px;
+  height: auto;
+  margin-left: 20px;
+}
+
+/* Contenu principal de la colonne gauche */
+.left-column-content {
+  text-align: center;
+  max-width: 600px;
+  text-align: left;
+  margin-top: 170px; /* Ajustement pour éviter la superposition avec le logo */
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-family: 'Halyard Display', sans-serif;
+  margin-bottom: 20px;
+  max-width: 460px;
+  color: var(--color-white);
+}
+
+.slogan {
+  font-size: 1.2rem;
+  font-family: 'Sans Serif', sans-serif;
+  max-width: 600px;
+  line-height: 1.6;
+  margin-top: 70px;
+}
+
+.slogan strong {
+  color: var(--color-white);
+  font-weight: bold;
+}
+
+.left-column-footer {
+  margin-top: auto;
+  font-size: 0.9rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Colonne droite */
+.right-column {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--color-white);
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background: var(--color-accent);
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: var(--color-secondary);
+  font-family: 'Halyard Display', sans-serif;
+  margin-bottom: 20px;
+}
+
+/* Champs de saisie */
+input[type="text"],
+input[type="password"] {
+  width: 95%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid var(--color-accent);
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: var(--color-light);
+  color: var(--color-text);
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  font-style: italic;
+  color: var(--color-gray);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Boutons */
+button {
+  width: 35%;
+  padding: 12px;
+  margin: 10px 0;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Sans Serif', sans-serif;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-hover);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Liens */
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

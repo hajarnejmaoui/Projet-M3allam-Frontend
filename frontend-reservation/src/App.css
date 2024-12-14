@@ -1,0 +1,410 @@
+/* Importation de la police */
+@import url('https://fonts.googleapis.com/css2?family=Halyard+Display:wght@400&family=Inter:wght@400&display=swap');
+
+/* Palette de couleurs */
+:root {
+  --color-primary: #4D595F;
+  --color-secondary: #0C5844;
+  --color-accent: #C0DED6;
+  --color-background: #E7FBF7;
+  --color-text: #091922;
+  --color-white: #FFFFFF;
+  --color-gray: #98ABA9;
+  --color-light: #F8FAF9;
+  --color-hover: #556166;
+  --dark-gray: #4D595F;
+  --green: #0C5844;
+  --light-blue: #C0DED6;
+  --pale-blue: #E7FBF7;
+  --dark-blue: #091922;
+  --white: #FFFFFF;
+  --gray: #98ABA9;
+  --light-gray: #F8FAF9;
+  --pale-green: #E9FDF5;
+  --mid-gray: #556166;
+}
+
+
+.articles-container {
+  padding: 20px;
+  width: 100%;
+}
+
+
+.section-header {
+  background-color: var(--light-blue);
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px; /* Espacement avant les cartes d'articles */
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 94%;
+}
+
+/* Titres dans section-header */
+.section-header h2 {
+text-align: left;
+  font-size: 40px;
+  color: var(--dark-blue);
+  margin: 0;
+}
+
+.section-header h3 {
+  text-align: left;
+
+  font-size:19px;
+  color: var(--green);
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* Section des articles */
+.articles {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: var(--light-blue);
+  border-radius: 16px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.articles h2 {
+  font-size: 40px;
+  color: var(--dark-blue);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.articles h3 {
+  font-size: 19px;
+  color: var(--green);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+/* Cartes d'articles */
+.article-card {
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+  color: var(--dark-gray);
+}
+
+.article-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Titres et prix dans les cartes */
+.article-card p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.article-card p:nth-child(2) {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: var(--green);
+}
+
+/* Style des champs de quantité et du bouton */
+.article-card div {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.article-card input {
+  width: 60px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--light-gray);
+  font-size: 1.1rem;
+  color: var(--dark-gray);
+  transition: background-color 0.3s ease;
+}
+
+.article-card input:focus {
+  background-color: var(--white);
+}
+
+.article-card button {
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.article-card button:hover {
+  background-color: var(--dark-blue);
+  transform: scale(1.05);
+}
+
+/* Flexbox pour aligner les cartes horizontalement */
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+/* Limiter la taille des cartes et garantir 3 par ligne */
+.articles .article-card {
+  flex: 1 1 calc(33% - 20px); /* 3 éléments par ligne */
+  max-width: 320px;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--light-gray);
+  margin: 0;
+  padding: 0;
+  color: var(--dark-gray);
+}
+
+/* Conteneur principal */
+.container {
+  padding: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.intro-section {
+  max-width: 1300px;
+  text-align: center;
+  background-color: var(--color-accent
+  );
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.intro-section h2 {
+  font-family: 'Halyard Display', sans-serif;
+  font-size: 2.5rem;
+  color: var(--color-secondary);
+}
+.intro-section p {
+  font-size: 1.2rem;
+  color: var(--dark-blue);
+  line-height: 1.6; /* Améliore la lisibilité */
+  margin-top: 15px;
+}
+
+/* Section des catégories */
+.categories {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.category-card {
+  background-color: var(--white);
+  border: 1px solid var(--gray);
+  border-radius: 12px; /* Légèrement plus arrondi */
+  padding: 30px;
+  margin: 15px 0;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: calc(33.333% - 20px); /* Trois cartes par ligne */
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.category-card:hover {
+  transform: translateY(-8px); /* Légère translation vers le haut au survol */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.category-card h3 {
+  color: var(--green);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.category-card p {
+  font-size: 1rem;
+  color: var(--dark-gray);
+  margin-bottom: 15px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.category-card:hover p {
+  color: var(--green); /* Changer la couleur du texte au survol */
+}
+/* Section du panier */
+.paniers-container {
+  background-color: var(--white);
+  position: fixed;
+  top: 27px;
+  right: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.paniers-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.paniers-container li {
+  background-color: var(--light-blue);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.paniers-container strong {
+  font-size: 1.2rem;
+  color: var(--dark-blue);
+  display: block;
+  margin-top: 20px;
+}
+
+.paniers-container button {
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.paniers-container button:hover {
+  background-color: var(--dark-blue);
+}
+
+/* Section de finalisation de commande */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--light-blue); /* Fond léger pour la section */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 500px; /* Limiter la largeur */
+  margin: 30px auto; /* Centrer horizontalement */
+}
+
+form h2 {
+  font-size: 1.8rem;
+  color: var(--dark-blue);
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+form label {
+  font-size: 1.1rem;
+  color: var(--dark-gray);
+  margin-bottom: 5px;
+}
+
+form input {
+  padding: 12px;
+  border: 1px solid var(--gray);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--dark-gray);
+  background-color: var(--light-gray);
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+form input:focus {
+  background-color: var(--white);
+  border-color: var(--green);
+  outline: none;
+}
+
+form button {
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 100%;
+  margin-top: 20px;
+}
+
+form button:hover {
+  background-color: var(--dark-blue);
+  transform: scale(1.05);
+}
+
+form button:active {
+  transform: scale(1);
+}
+
+/* Espacement entre les champs */
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Optionnel : Placeholder style */
+form input::placeholder {
+  color: var(--mid-gray);
+}
+
+
+/* Icone du panier fixée */
+.icon-panier {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--green);
+  color: var(--white);
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.icon-panier:hover {
+  transform: scale(1.1);
+}
+.app-logo {
+  width: 100px;
+  height: auto;
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 20px;
+
+}
